@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>不動産会社サイト</title>
+    <link rel="stylesheet" href="サービスcss.css">
+   <style>
+   
+.falling-cubes {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.cube {
+  position: absolute;
+  width: 80px;
+  opacity: 0.5;
+  animation: fall 20s linear infinite;
+}
+
+.cube1 {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.cube2 {
+  left: 50%;
+  width: 80px;
+  animation-delay: 5s;
+}
+
+.cube3 {
+  left: 80%;
+  width: 120px;
+  animation-delay: 10s;
+}
+
+@keyframes fall {
+  0% {
+    top: -100px;
+    
+    opacity: 0.6;
+  }
+  50% {
+    
+    opacity: 0.4;
+  }
+  100% {
+    top: 100vh;
+   
+    opacity: 0.6;
+  }
+}
+</style>
+
+ 
+
+</head>
+
+
+
+<body>
+    <!-- ヘッダー -->
+   <header class="site-header">
+  <div class="logo">
+    <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/common/header/logo.png" alt="ロゴ">
+    
+  </div>
+ <header>
+ 
+<nav class="global-nav">
+    <ul>
+     <li><a href="サンセイ.html">ホーム</a></li>
+      <li><a href="サービス.html">サービス</a></li>
+      <li><a href="代表メッセージ.html">メッセージ</a></li>
+      <li><a href="ブログ.html">メディア</a></li>
+      <li><a href="お客様の声.html">お客様の声</a></li>
+      <li><a href="会社案内.html">会社情報</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+
+</header>
+
+</header>
+
+<script src="let slideIndex = 0;.js"></script>
+
+   <div class="carousel-container">
+  <div class="carousel">
+    <img src="https://www.free-materials.com/adm/wp-content/uploads/2017/04/bd448f845547d0c89780c95ea2bcd1ca.jpg" class="carousel-image active" />
+    <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top_01.jpg" class="carousel-image " />
+    <img src="https://cdn.4travel.jp/img/thumbnails/imk/travelogue_pict/23/25/56/650x_23255624.jpg?updated_at=1316785616" class="carousel-image" />
+  </div>
+  
+</div>
+  <div class="carousel-text">
+    <h2>サンセイのサービス</h2>
+  </div>
+</div>
+
+
+
+
+
+<script>
+  const images = document.querySelectorAll('.carousel-image');
+  let current = 0;
+
+  function showNextImage() {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }
+
+  setInterval(showNextImage, 3000); // 3秒ごとに切り替え
+</script>
+
+
+<a href="お問い合わせ.html" class="recruit-button" target="_blank">
+  <div class="circle-text">
+    無料相談はこちら<br>
+    <span>
+      <img src="https://i.postimg.cc/m20B6J7n/tsukamotohideki.png"  alt="補足画像" class="consult-image">
+    </span>
+  </div>
+</a>
+
+
+<body>
+  <div class="falling-cubes">
+    <img src="https://i.postimg.cc/xCzCc39c/thumbnail-image.png" class="cube cube1" />
+    <img src="https://i.postimg.cc/xCzCc39c/thumbnail-image.png" class="cube cube2" />
+    <img src="https://i.postimg.cc/xCzCc39c/thumbnail-image.png" class="cube cube3" />
+  </div>
+
+
+<section class="service-section">
+    <h2 class="service-title">サービス内容</h2>
+    <p class="service-subtitle">SERVICE</p>
+  <div class="service-box">
+    <div class="service-left">
+      <p class="service-number">SERVICE 01</p>
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_01.png" alt="サービスアイコン" class="service-icon">
+    </div>
+    <div class="service-right">
+      <h3 class="service-title">借地権相談</h3>
+      <p class="service-text">
+        大阪市港区大正区等の借地権に関するコンサルティング業務、売却や利活用等、<br>ご相談内容に応じてご提案させて頂きます。<br>
+        賃借人名義が亡父や亡母のままである借地の取り扱いや大阪市との賃貸借契約の契約更新の<br>アドバイス。<br>
+        空き家による建物老朽化対策や大阪市からの底地の買取や早期売却（価格査定を含む）など、<br>これまでの１０００件以上の相談・実績からお客様の要望に応じた対応をさせて頂きます。
+      </p>
+    </div>
+  </div>
+</section>
+
+ <div class="service-box">
+    <div class="service-left">
+      <p class="service-number">SERVICE 02</p>
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_02.png" alt="サービスアイコン" class="service-icon">
+    </div>
+    <div class="service-right">
+      <h3 class="service-title">相続不動産コンサルティング</h3>
+      <p class="service-text">
+        最善の相続対策は、元気なうちに行なうべきで、エンディングノートの書き方や遺産分割を考慮した遺言や家族信託・生前贈与などのアドバイス。<br>
+        相続の発生した不動産については、相続人の確定から遺産分割、相続登記まで士業の先生が<br>必要な場合には連携しワンストップサービスで対応させて頂きます。<br>
+       相続税についても提携税理士の紹介も可能です。<br>また、相続発生後のトラブルについてもお気軽にご相談下さい。<br>
+       相続人でできる遺産分割における調停・審判もご提案させて頂きます。
+      </p>
+    </div>
+  </div>
+</section>
+
+ <div class="service-box">
+    <div class="service-left">
+      <p class="service-number">SERVICE 03</p>
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_03.png" alt="サービスアイコン" class="service-icon">
+    </div>
+    <div class="service-right">
+      <h3 class="service-title">収益不動産有効活用コンサルティング</h3>
+      <p class="service-text">
+        連棟長屋の文化住宅やアパートなど管理会社を利用せず個人で管理した収益不動産の活用や<br>管理等について調査等を行ない今後の方向性をご提案させて頂きます。<br>
+       特に建物の老朽化に伴うメンテナンスは必要以上に経費がかかります。<br>空き家でもリノベーションによって収益性が上がる可能性もございます。<br>
+       家族構成からの視点や将来的な収支についてもご提案させて頂きます。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section class="flow-section">
+  <h2 class="flow-title">サービスの流れ</h2>
+  <p class="flow-subtitle">FLOW</p>
+
+  <div class="flow-steps">
+    <div class="step">
+      <p class="step-number">STEP 01</p>
+      <div class="step-icon">📞</div>
+      <h3>お問い合わせ</h3>
+      <p>面談日程の決定と、<br>不動産情報をメールにて<br>お知らせします。</p>
+    </div>
+
+    <div class="step">
+      <p class="step-number">STEP 02</p>
+      <div class="step-icon">💬</div>
+      <h3>面談</h3>
+      <p>頂いた情報を元に、<br>担当者が面談を<br>いたします。</p>
+    </div>
+
+    <div class="step">
+      <p class="step-number">STEP 03</p>
+      <div class="step-icon">📊</div>
+      <h3>調査</h3>
+      <p>委任状を頂き、<br>担当者が調査<br>させていただきます。</p>
+    </div>
+
+    <div class="solution">
+      <p class="step-number">SOLUTION</p>
+      <div class="solution-item">📄 借地権相談</div>
+      <div class="solution-item">👨‍👩‍👧 相続不動産<br>コンサルティング</div>
+      <div class="solution-item">🏠 収益不動産 <br>有効活用<br>コンサルティング</div>
+    </div>
+  </div>
+</section>
+
+
+
+</style>
+</head>
+<body>
+
+
+  <section class="issues-section">
+  <h2 class="section-title">こんなお悩みはありませんか？</h2>
+
+  <div class="issues-container">
+    <div class="issue-box">
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/sub/case_icon.png" alt="課題1" class="issue-image">
+      <p class="issue-text">借地を相続すべきかどうか</p>
+      <div class="issue-footer">事例１</div>
+      <p class="issue-desc">
+        支払う地代と受領する賃料を<br>比較すると
+        支払う地代が多く<br>赤字になってしまう…。<br>
+        借地以外にも相続財産があるので<br>放棄できない。<br>
+      </p>
+    </div>
+
+    <div class="issue-box">
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/sub/case_icon.png" alt="課題2" class="issue-image">
+      <p class="issue-text">地代を滞納してしまっている</p>
+      <div class="issue-footer">事例２
+      </div>
+      <p class="issue-desc">
+        親から借地権を相続し、<br>同じく相続人の妹と借地権付建物に<br>同居。<br>
+        妹の世話も相談者がしているが、<br>地代の滞納が重なり自己破産を検討…。<br>
+      </p>
+    </div>
+
+    <div class="issue-box">
+      <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/sub/case_icon.png" alt="課題3" class="issue-image">
+      <p class="issue-text">突然行政からの連絡が…</p>
+      <div class="issue-footer">事例３</div>
+      <p class="issue-desc">
+        30年前に住んでいた実家が老朽化し、<br>対処して欲しいと行政から連絡。<br>
+        歳の離れた兄弟もどこに住んでいるか<br>分からず、連絡先も分からない。<br>
+        このまま放置し近隣住民に<br>被害を与えれば莫大な損害が…。<br>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<h1>不動産コンサルティング料金表</h1>
+<p>料金は下記の通りです（別途消費税要）</p>
+
+<table>
+  <tr>
+    <th>　</th>
+    <th>初回ご来店の場合</th>
+    <th>ご来店2回目以降</th>
+  </tr>
+  <tr>
+    <td>30分</td>
+    <td rowspan="2">無料<br>（60分）</td>
+    <td>3,000円</td>
+  </tr>
+  <tr>
+    <td>1時間</td>
+    <td>6,000円（60分）</td>
+  </tr>
+  <tr>
+    <td>1時間30分</td>
+    <td>3,000円（90分）</td>
+    <td>9,000円（90分）</td>
+  </tr>
+  <tr>
+    <td>2時間</td>
+    <td>6,000円（120分）</td>
+    <td>12,000円（120分）</td>
+  </tr>
+</table>
+
+<div class="note">
+  <p>※コンサルティング料金につきましては、2時間以降30分毎に4,000円加算させて頂きます。<br>
+  ※企画提案等が必要な場合には事業案内資料を別途作成します。<br>
+  ※業務内容に応じて、書類の内容を取りまとめた提案書を作成いたします。<br>
+  ※売却査定は無料。<br>
+  ※且し査定書作成につきましては別途費用が発生します。</p>
+</div>
+
+
+
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <h2>サンセイ</h2>
+      <small>SANSEI SHOKAI（旧三誠商会）</small>
+    </div>
+
+
+    <div class="footer-contact">
+      <div class="tel-box">
+        <strong>06-6571-0338</strong>
+        <p>営業時間 9:00 - 19:00（日曜定休）</p>
+      </div>
+    </div>
+  </footer>
+ 
+
+ 
+</body>
+</html>

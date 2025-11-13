@@ -1,0 +1,551 @@
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e4ebf5;
+
+}
+
+/* ヘッダー全体を左右に分ける */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ロゴ設定 */
+.logo img {
+  height: 55px;
+  width: auto;
+}
+.logo-text {
+  font-size: 10px; /* 小さめの文字サイズ */
+  color: #333; /* 文字色調整 */
+}
+
+/* ナビゲーション全体（右寄せ） */
+.global-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 各リンクスタイル */
+.global-nav-block {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.global-nav {
+  background-color: #e5ecf1;
+  padding: 0;
+}
+
+.global-nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-nav li {
+  border-left: 1px solid #fff;
+}
+
+.global-nav li:first-child {
+  border-left: none;
+}
+
+.global-nav a {
+  display: block;
+  color: rgb(28, 28, 28);
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.global-nav a:hover {
+  background-color: #ccebf9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px black;
+  z-index: 1;
+}
+
+.recruit-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 210px;
+  height: 210px;
+  background-color: #0d69ac;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(69, 56, 56, 0.727);
+  text-align: center;
+  text-decoration: none;
+  color: #f7f5f5;
+  font-weight: bold;
+  font-family: sans-serif;
+  z-index: 1000;
+  transition: transform 0.3s;
+   
+}
+
+.recruit-button:hover {
+  transform: scale(1.05);
+  
+}
+
+.circle-text {
+  font-size: 19px;
+  padding-top: 36px;
+  line-height: 1.2;
+ 
+}
+
+.circle-text span {
+  font-size: 13px;
+  font-weight: normal;
+  
+}
+
+.circle-arrow {
+  font-size: 24px;
+  color: #333;
+  margin-top: 60px;
+  
+}
+
+.consult-image {
+    
+  width: 80px;   /* 必要に応じて調整 */
+  height: auto;
+}
+
+
+
+/* CSS */
+
+
+.properties {
+    padding: 40px 20px;
+    
+}
+
+.property-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.property-item {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.property-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+
+.news-section {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.news-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #007bff;
+  padding-left: 0.5rem;
+  color: #333;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-date {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.3rem;
+}
+
+.news-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+/* ベース設定 */
+body {
+  background-color: #e4ebf5;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+/* セクション共通 */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  border-bottom: 2px solid #005fa3;
+  padding-bottom: 8px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* カンパニーセクション */
+.company-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 10%;
+}
+
+.company-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: white;
+  width:fit-content;
+  border-radius: 20px;
+}
+
+.company-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.company-image img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* View more ボタン */
+.view-more {
+  display: inline-block;
+  color: #005fa3;
+  font-weight: bold;
+  font-size: 1rem;
+  position: relative;
+}
+
+.view-more::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #005fa3;
+  transition: width 0.3s ease;
+}
+
+.view-more:hover::after {
+  width: 100%;
+}
+
+/* お問い合わせフォーム */
+.contact-form {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 60px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-description {
+  font-size: 1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #005fa3;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003f75;
+}
+
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+   
+    padding: 40px 30px;
+    border-radius: 15px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .tag {
+    background: #005bac;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 12px;
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    border-radius: 3px;
+  }
+
+  .title {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 8px 10px;
+  }
+
+  .desc {
+    font-size: 14px;
+    color: #555;
+    margin: 0 10px 15px;
+    line-height: 1.5;
+  }
+
+  
+
+
+
+footer {
+  width:100%;
+  background-color: #003B8E; /* 青色背景 */
+  color: #fff; /* 文字を白に */
+  padding: 60px 0; /* 縦幅を広く */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.footer-logo small {
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並び */
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  text-align: right;
+  color: #fff;
+}
+
+.footer-contact strong {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #fff;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #003B8E;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-button:hover {
+  background-color: #f5f5f5;
+}

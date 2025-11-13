@@ -1,0 +1,344 @@
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e4ebf5;
+
+}
+
+/* ヘッダー全体を左右に分ける */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ロゴ設定 */
+.logo img {
+  height: 55px;
+  width: auto;
+}
+.logo-text {
+  font-size: 10px; /* 小さめの文字サイズ */
+  color: #333; /* 文字色調整 */
+}
+
+/* ナビゲーション全体（右寄せ） */
+.global-nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 各リンクスタイル */
+.global-nav-block {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+}
+
+.global-nav {
+  background-color: #e5ecf1;
+  padding: 0;
+}
+
+.global-nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-nav li {
+  border-left: 1px solid #fff;
+  
+}
+
+.global-nav li:first-child {
+  border-left: none;
+}
+
+.global-nav a {
+  display: block;
+  color: rgb(28, 28, 28);
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.global-nav a:hover {
+  background-color: #ccebf9;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
+
+
+
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 6px black;
+  z-index: 1;
+  text-align: center;
+}
+
+.recruit-button {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 210px;
+  height: 210px;
+  background-color: #0d69ac;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(69, 56, 56, 0.727);
+  text-align: center;
+  text-decoration: none;
+  color: #f7f5f5;
+  font-weight: bold;
+  font-family: sans-serif;
+  z-index: 1000;
+  transition: transform 0.3s;
+   
+}
+
+.recruit-button:hover {
+  transform: scale(1.05);
+  
+}
+
+.circle-text {
+  font-size: 19px;
+  padding-top: 36px;
+  line-height: 1.2;
+ 
+}
+
+.circle-text span {
+  font-size: 13px;
+  font-weight: normal;
+  
+}
+
+.circle-arrow {
+  font-size: 24px;
+  color: #333;
+  margin-top: 60px;
+  
+}
+
+.consult-image {
+    
+  width: 80px;   /* 必要に応じて調整 */
+  height: auto;
+}
+
+.service-section {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .service-section h2 {
+        color:#003B8E;
+      font-size: 39px;
+      margin-bottom: 10px;
+    }
+    .service-section p {
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+
+/* フォーム全体 */
+#contact-form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+/* ラベル・入力・テキストエリア・ボタンを縦並びに強制 */
+#contact-form label,
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  display: block !important;
+  width: 100% !important;
+  margin-bottom: 20px;
+}
+
+/* 入力欄・テキストエリア */
+#contact-form input,
+#contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #218bd6;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #609ff8;
+  outline: none;
+}
+
+#contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 送信ボタン */
+#contact-form button {
+  padding: 12px 20px;
+  background-color: #161ba7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#contact-form button:hover {
+  background-color: #431a9d;
+}
+
+/* メッセージ */
+#success-message, #error-message {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  display: none; /* 初期状態は非表示 */
+}
+
+footer {
+  width:100%;
+  background-color: #003B8E; /* 青色背景 */
+  color: #fff; /* 文字を白に */
+  padding: 60px 0; /* 縦幅を広く */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-logo h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.footer-logo small {
+  font-size: 14px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* 横並び */
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact {
+  text-align: right;
+  color: #fff;
+}
+
+.footer-contact strong {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+}
+
+.footer-contact p {
+  margin: 0;
+  color: #fff;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #003B8E;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.contact-button:hover {
+  background-color: #f5f5f5;
+}
