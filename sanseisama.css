@@ -126,6 +126,17 @@ html {
   z-index: 1;
   text-align: center;
 }
+/* デフォルトは表示 */
+.carousel-text {
+  display: block;
+}
+
+/* スマホサイズのみ非表示 */
+@media screen and (max-width: 768px) {
+  .carousel-text {
+    display: none;
+  }
+}
 
 .recruit-button {
   position: fixed;
@@ -1173,3 +1184,4 @@ footer {
   }
 
 }
+
