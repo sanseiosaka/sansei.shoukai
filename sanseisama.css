@@ -385,6 +385,42 @@ a {
         flex: 1 1 100%;
       }
     }
+
+/* スマホ向け追加調整 */
+@media (max-width: 768px) {
+  /* アイテムを縦並びに */
+  .blog .item {
+    flex-direction: column;   /* 日付と本文を縦並び */
+    align-items: flex-start;
+    margin-left: 0;           /* 左余白をなくす */
+    padding-left: 0;
+  }
+
+  /* 日付部分を横並びにする場合 */
+  .blog .item-date {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  /* 日付の文字サイズを少し小さく */
+  .blog .item-date .day {
+    font-size: 20px;
+  }
+  .blog .item-date .week {
+    font-size: 10px;
+  }
+
+  /* カテゴリとリンクを少し大きく */
+  .blog .item-content a {
+    font-size: 14px;
+  }
+
+}
+
+
  /* サービスセクション */
     .service-section {
       text-align: center;
@@ -1184,4 +1220,5 @@ footer {
   }
 
 }
+
 
