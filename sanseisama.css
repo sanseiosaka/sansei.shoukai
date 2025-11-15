@@ -759,9 +759,12 @@ body {
     color: #0c0c0c;
 }
 
+/* ベース調整 */
 .voice-section {
-  width:1500px;
-  padding: 40px 0;
+  width: 100%;
+  max-width: 1500px;  /* PC用の最大幅 */
+  padding: 40px 20px;  /* スマホ用に左右余白を追加 */
+  margin: 0 auto;      /* 中央寄せ */
   text-align: center;
 }
 
@@ -769,8 +772,9 @@ body {
   font-size: 32px;
   font-weight: bold;
   color: #0b2e6b;
-  text-align: right;
+  text-align: center; /* スマホでは中央寄せが自然 */
 }
+
 .voice-title span {
   display: block;
   font-size: 16px;
@@ -783,6 +787,7 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
   text-align: left;
+  margin: 0 auto;  /* 中央寄せ */
 }
 
 .voice-card img {
@@ -813,6 +818,35 @@ body {
   border-radius: 8px;
 }
 
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .voice-section {
+    padding: 20px 10px;
+  }
+
+  .voice-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .voice-card {
+    margin-bottom: 20px;
+  }
+
+  .voice-tag {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .voice-text {
+    font-size: 13px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* 小さい画面では非表示にする */
+  }
+}
 
 body {
   
@@ -1220,5 +1254,6 @@ footer {
   }
 
 }
+
 
 
