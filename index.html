@@ -6,74 +6,27 @@
     <title>株式会社サンセイ</title>
     <link rel="stylesheet" href="sanseisama.css">
 
-    <!-- ハンバーガーメニュー用 -->
     <style>
-        /* ハンバーガーメニュー（スマホ表示） */
-        .hamburger {
-            display: none;
-            width: 30px;
-            cursor: pointer;
-            z-index: 2000;
+        /* -------------------------
+           スマホ縦並びナビゲーション
+        -------------------------- */
+        nav.global-nav ul {
+            display: flex;
+            gap: 20px;
         }
 
-        .hamburger span {
-            display: block;
-            height: 3px;
-            margin: 6px 0;
-            background: #333;
-            border-radius: 3px;
-        }
-
-        /* スマホ時のメニュー表示 */
         @media (max-width: 768px) {
-            nav.global-nav {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 70%;
-                height: 100vh;
-                background: #fff;
-                transition: 0.3s;
-                padding-top: 80px;
-                z-index: 1500;
-            }
-
-            nav.global-nav.open {
-                right: 0;
-            }
-
             nav.global-nav ul {
-                display: block;
-                text-align: left;
-                padding-left: 20px;
+                flex-direction: column;      /* ← スマホは縦並び */
+                gap: 10px;
+                padding: 10px 0;
+                text-align: center;
             }
 
-            .hamburger {
+            nav.global-nav ul li a {
                 display: block;
-                position: absolute;
-                right: 20px;
-                top: 25px;
-            }
-        }
-
-        /* カルーセルのテキスト中央寄せ */
-        .carousel-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: white;
-            text-shadow: 0px 0px 6px rgba(0,0,0,0.5);
-        }
-
-        .carousel-text h2 {
-            font-size: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .carousel-text h2 {
-                font-size: 1.5rem;
+                padding: 10px;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -82,29 +35,19 @@
 <body>
 
 <!--====================================
-  ヘッダー
+  正しい構造のヘッダー
 =====================================-->
 <header class="site-header">
-
     <div class="logo">
         <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/common/header/logo.png" alt="ロゴ">
     </div>
 
-    <div class="header-info">
-        <span style="font-size:18px; font-weight:bold; color:#0d0d8b;">
-            06-6571-0338<br>営業時間：9:00〜18:00
-        </span>
+    <div class="header-info" style="font-size: 18px; font-weight: bold; color:rgb(13, 13, 139);">
+        06-6571-0338<br>営業時間：9:00～18:00
     </div>
 
-    <!-- ハンバーガー -->
-    <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!-- ナビ -->
-    <nav class="global-nav" id="global-nav">
+    <!-- PC & スマホ共通メニュー（ハンバーガーなし） -->
+    <nav class="global-nav">
         <ul>
             <li><a href="index.html">ホーム</a></li>
             <li><a href="サービス.html">サービス</a></li>
@@ -114,26 +57,16 @@
             <li><a href="会社案内.html">会社情報</a></li>
         </ul>
     </nav>
-
 </header>
 
-<script>
-    // ハンバーガーメニュー制御
-    const ham = document.getElementById("hamburger");
-    const nav = document.getElementById("global-nav");
-    ham.addEventListener("click", () => {
-        nav.classList.toggle("open");
-    });
-</script>
-
 <!--====================================
-  カルーセル
+  カルーセル（テキスト位置は変更なし）
 =====================================-->
 <div class="carousel-container">
     <div class="carousel">
-        <img src="https://www.free-materials.com/adm/wp-content/uploads/2017/04/bd448f845547d0c89780c95ea2bcd1ca.jpg" class="carousel-image active">
-        <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top_01.jpg" class="carousel-image">
-        <img src="https://cdn.4travel.jp/img/thumbnails/imk/travelogue_pict/23/25/56/650x_23255624.jpg?updated_at=1316785616" class="carousel-image">
+        <img src="https://www.free-materials.com/adm/wp-content/uploads/2017/04/bd448f845547d0c89780c95ea2bcd1ca.jpg" class="carousel-image active" />
+        <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top_01.jpg" class="carousel-image" />
+        <img src="https://cdn.4travel.jp/img/thumbnails/imk/travelogue_pict/23/25/56/650x_23255624.jpg?updated_at=1316785616" class="carousel-image" />
     </div>
 
     <div class="carousel-text">
@@ -145,23 +78,24 @@
 <script>
     const images = document.querySelectorAll('.carousel-image');
     let current = 0;
+
     function showNextImage() {
         images[current].classList.remove('active');
         current = (current + 1) % images.length;
         images[current].classList.add('active');
     }
+
     setInterval(showNextImage, 3000);
 </script>
 
-<!-- 以下、あなたが送ってくれた各セクションは -->
-<!-- 既存の構造を壊さずスマホ対応に最適化する形で -->
-<!-- そのまま入れられるようになっています -->
-<!-- ========================================== -->
-<!-- ======= ここに News / Blog / Service / Message / Blog2 / YouTube / Voice / Map / Contact / Footer ======= -->
-<!-- ========================================== -->
+<!-- ======================================
+  ここから下に「News / Blog / Service ...」
+  のセクションをそのまま貼り付けてOK
+====================================== -->
 
-<!-- あなたが元々貼った内容をそのまま入れて使えます -->
-<!-- 必要ならこちらで全セクションも調整します！ -->
+
+
+
 
 <a href="お問い合わせ.html" class="recruit-button" target="_blank">
   <div class="circle-text">
@@ -548,6 +482,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
  
 </body>
 </html>
+
 
 
 
