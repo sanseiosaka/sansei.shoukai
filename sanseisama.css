@@ -817,6 +817,32 @@ body {
   height: 40px;
   border-radius: 8px;
 }
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 90% !important; /* スマホではスライドを画面幅に合わせる */
+    margin: 0 auto;        /* 中央寄せ */
+  }
+
+  .voice-card {
+    padding: 10px;
+  }
+
+  .voice-tag {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  .voice-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  /* スライドナビを小さく */
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none; /* スマホでは非表示も可 */
+  }
+}
 
 /* スマホ対応 */
 @media (max-width: 768px) {
@@ -1254,6 +1280,7 @@ footer {
   }
 
 }
+
 
 
 
