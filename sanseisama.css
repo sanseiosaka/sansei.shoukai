@@ -844,33 +844,10 @@ body {
   }
 }
 
-/* スマホ対応 */
+/* スマホで非表示 */
 @media (max-width: 768px) {
   .voice-section {
-    padding: 20px 10px;
-  }
-
-  .voice-title {
-    font-size: 24px;
-    text-align: center;
-  }
-
-  .voice-card {
-    margin-bottom: 20px;
-  }
-
-  .voice-tag {
-    font-size: 12px;
-    padding: 3px 8px;
-  }
-
-  .voice-text {
-    font-size: 13px;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none; /* 小さい画面では非表示にする */
+    display: none;
   }
 }
 
@@ -1280,6 +1257,7 @@ footer {
   }
 
 }
+
 
 
 
