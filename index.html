@@ -53,4 +53,220 @@
     </div>
 
     <div class="header-info" style="font-size: 18px; font-weight: bold; color:rgb(13, 13, 139);">
-        06-657
+        06-6571-0338<br>営業時間：9:00～18:00
+    </div>
+
+    <nav class="global-nav">
+        <ul>
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="サービス.html">サービス</a></li>
+            <li><a href="代表メッセージ.html">メッセージ</a></li>
+            <li><a href="ブログ.html">メディア</a></li>
+            <li><a href="お客様の声.html">お客様の声</a></li>
+            <li><a href="会社案内.html">会社情報</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- カルーセル -->
+<div class="carousel-container">
+    <div class="carousel">
+        <img src="https://www.free-materials.com/adm/wp-content/uploads/2017/04/bd448f845547d0c89780c95ea2bcd1ca.jpg" class="carousel-image active" />
+        <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top_01.jpg" class="carousel-image" />
+        <img src="https://cdn.4travel.jp/img/thumbnails/imk/travelogue_pict/23/25/56/650x_23255624.jpg?updated_at=1316785616" class="carousel-image" />
+    </div>
+
+    <div class="carousel-text">
+        <h2>借地権と相続不動産の事ならサンセイ</h2>
+        <p>豊富な経験と知識でサポートいたします！</p>
+    </div>
+</div>
+
+<script>
+    const images = document.querySelectorAll('.carousel-image');
+    let current = 0;
+    function showNextImage() {
+        images[current].classList.remove('active');
+        current = (current + 1) % images.length;
+        images[current].classList.add('active');
+    }
+    setInterval(showNextImage, 3000);
+</script>
+
+<!-- NEWS -->
+<div class="section-wrapper">
+    <div class="section blog">
+        <h2>News</h2>
+
+        <div class="item">
+            <div class="item-date">
+                <div class="year">2025</div>
+                <div class="day">09.27</div>
+                <div class="week">SAT</div>
+            </div>
+            <div class="item-content">
+                <span class="category">セミナー開催</span><br>
+                <a href="https://a2103.jp/seminar/">第101回<br>大阪市借地権セミナー</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-date">
+                <div class="year">2025</div>
+                <div class="day">08.23</div>
+                <div class="week">MON</div>
+            </div>
+            <div class="item-content">
+                <span class="category">セミナー開催</span><br>
+                <a href="https://a2103.jp/seminar/">第100回<br>大阪市借地権セミナー</a>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-date">
+                <div class="year">2025</div>
+                <div class="day">07.26</div>
+                <div class="week">SAT</div>
+            </div>
+            <div class="item-content">
+                <span class="category">セミナー開催</span><br>
+                <a href="https://a2103.jp/seminar/">第99回<br>大阪市借地権セミナー</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- BLOG -->
+<div class="section blog">
+    <h2>Blog</h2>
+
+    <div class="item">
+        <div class="item-date">
+            <div class="year">2025</div>
+            <div class="day">09.27</div>
+            <div class="week">SAT</div>
+        </div>
+        <div class="item-content">
+            <span class="category">ブログ更新</span><br>
+            <a href="https://a2103.jp/blog/">借地権の自宅を売るには<br>“判断能力”が必要？</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-date">
+            <div class="year">2025</div>
+            <div class="day">09.22</div>
+            <div class="week">MON</div>
+        </div>
+        <div class="item-content">
+            <span class="category">ブログ更新</span><br>
+            <a href="https://a2103.jp/blog/">相続した借地権を売却した際<br>発生する税金とは？</a>
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="item-date">
+            <div class="year">2025</div>
+            <div class="day">09.20</div>
+            <div class="week">SAT</div>
+        </div>
+        <div class="item-content">
+            <span class="category">ブログ更新</span><br>
+            <a href="https://a2103.jp/blog/">承諾料が高すぎる！<br>地主と揉める3つのケース</a>
+        </div>
+    </div>
+</div>
+
+<!-- サービス -->
+<section class="service-section">
+    <h2>サービス</h2>
+    <div class="view-more">
+        <a href="サービス.html">-View More-</a>
+    </div>
+    <p>株式会社サンセイのサービスについて、実際のケースを交えご説明いたします。</p>
+
+    <div class="service-boxes">
+        <div class="service-box">
+            <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_01.png" class="service-icon">
+            <h3>＜借地権相談＞</h3>
+            <p>借地権に関するコンサルティング業務</p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_02.png" class="service-icon">
+            <h3>＜相続不動産コンサルティング＞</h3>
+            <p>ワンストップサービスでご対応</p>
+        </div>
+
+        <div class="service-box">
+            <img src="https://a2103.jp/wp-content/themes/sansei-theme/images/top/top__content_03.png" class="service-icon">
+            <h3>＜収益不動産活用コンサルティング＞</h3>
+            <p>活用や管理の方向性をご提案</p>
+        </div>
+    </div>
+</section>
+
+<!-- 代表メッセージ -->
+<section class="section">
+    <img src="https://i.postimg.cc/PqHgYQ3f/thumbnail-home2.jpg" alt="人物写真">
+    <div class="text-box">
+        <h2>代表メッセージ</h2>
+        <div class="view-more">
+            <a href="代表メッセージ.html">-View More-</a>
+        </div>
+        <p>サンセイ(旧三誠商会)とは…</p>
+    </div>
+</section>
+
+<!-- ブログ紹介 -->
+<section class="section">
+    <img src="https://i.postimg.cc/HkcLyhFj/thumbnail-home3.jpg" alt="人物写真">
+    <div class="text-box">
+        <h2>ブログ</h2>
+        <div class="view-more">
+            <a href="ブログ.html">-View More-</a>
+        </div>
+        <p>借地権・相続に関するブログを更新中。</p>
+    </div>
+</section>
+
+<!-- お客様の声（スマホ非表示） -->
+<section class="voice-section">
+    <h1 class="title">お客様の声</h1>
+    <div class="view-more"><a href="お客様の声.html">-View More-</a></div>
+    <p class="description">皆様からのメッセージをご紹介。</p>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="voice-card">…</div></div>
+            <div class="swiper-slide"><div class="voice-card">…</div></div>
+            <div class="swiper-slide"><div class="voice-card">…</div></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</section>
+
+<!-- 会社案内 -->
+<section class="section">
+    <div class="map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?..."></iframe>
+    </div>
+    <div class="breadcrumb">
+        <h2>会社案内</h2>
+        <div class="view-more"><a href="会社案内.html">-View More-</a></div>
+        <p>株式会社サンセイ(旧三誠商会)</p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-logo">
+            <h2>サンセイ</h2>
+            <small>SANSEI SHOKAI（旧三誠商会）</small>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
