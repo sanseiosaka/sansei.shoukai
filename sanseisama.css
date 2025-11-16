@@ -1259,6 +1259,21 @@ footer {
 }
 
 
+/* ==========================
+   最終的な body リセット（決定版）
+========================== */
+body {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;            /* ← 余白を消してスマホ崩れを解消 */
+    overflow-x: hidden;    /* ← はみ出し防止 */
+    font-family: "Noto Sans JP", sans-serif;
+    background-color: #f6f7f8;
+    color: #333;
+    line-height: 1.6;
+}
+
 
 
 
