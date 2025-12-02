@@ -90,25 +90,6 @@ html {
   scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 768px) {
-  .global-nav ul {
-    display: flex;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 0;
-    padding: 0 8px;
-  }
-
-  .global-nav li {
-    flex: 0 0 auto; /* 横スクロール可にする */
-  }
-
-  .global-nav a {
-    padding: 14px 16px;
-    display: block;
-  }
-
-  /* スク*
 
 
 .carousel {
@@ -1293,6 +1274,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
 
 
 
