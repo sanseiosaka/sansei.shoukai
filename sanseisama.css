@@ -83,12 +83,32 @@ body {
 
 .global-nav a:hover {
   background-color: #ccebf9;
+
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media screen and (max-width: 768px) {
+  .gnav ul {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 0;
+    padding: 0 8px;
+  }
+
+  .gnav li {
+    flex: 0 0 auto; /* 横スクロール可にする */
+  }
+
+  .gnav a {
+    padding: 14px 16px;
+    display: block;
+  }
+
+  /* スク*
 
 
 .carousel {
@@ -1273,6 +1293,7 @@ body {
     color: #333;
     line-height: 1.6;
 }
+
 
 
 
