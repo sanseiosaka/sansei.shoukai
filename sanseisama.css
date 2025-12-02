@@ -486,24 +486,6 @@ a {
       margin-bottom: 5px;
     }
    
-@media screen and (max-width: 768px) {
-
-  .service-boxes {
-    display: flex;
-    flex-direction: column; /* ← これが最重要ポイント */
-    gap: 24px;
-    width: 100%;
-  }
-
-  .service-box {
-    width: 100%; /* 固定幅を無効化 */
-  }
-
-  .service-box img {
-    max-width: 100%;
-    height: auto; /* はみ出し防止 */
-  }
-}
 
  .view-more a {
   font-size: 20px;
