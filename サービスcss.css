@@ -83,6 +83,60 @@ body {
   background-color: #ccebf9;
 }
 
+/* ===== ハンバーガーボタン ===== */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #000;
+  margin: 6px 0;
+}
+
+/* ===== スマホ時のみ ===== */
+@media screen and (max-width: 768px) {
+
+  /* グローバルナビを隠す */
+  .global-nav {
+    display: none;
+  }
+
+  /* ハンバーガーを表示 */
+  .hamburger {
+    display: block;
+  }
+
+  /* メニューを開いた状態 */
+  .global-nav.active {
+    display: block;
+  }
+
+  /* 縦並びに変更 */
+  .global-nav ul {
+    flex-direction: column;
+  }
+
+  .global-nav li {
+    border-left: none;
+    border-top: 1px solid #fff;
+  }
+
+  .global-nav li:first-child {
+    border-top: none;
+  }
+
+  .global-nav a {
+    padding: 15px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -805,3 +859,4 @@ footer {
 .contact-button:hover {
   background-color: #f5f5f5;
 }
+
