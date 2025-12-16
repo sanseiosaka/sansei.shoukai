@@ -122,6 +122,17 @@ html {
   text-shadow: 1px 1px 6px black;
   z-index: 1;
 }
+/* デフォルトは表示 */
+.carousel-text {
+  display: block;
+}
+
+/* スマホサイズのみ非表示 */
+@media screen and (max-width: 768px) {
+  .carousel-text {
+    display: none;
+  }
+}
 
 .recruit-button {
   position: fixed;
@@ -573,3 +584,4 @@ footer {
     padding: 10px;
     font-size: 14px;
   }
+
