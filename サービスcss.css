@@ -311,6 +311,11 @@ section {
   color: #005fa3;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 768px) {
+  .service-text {
+    display: none;
+  }
+}
 
 /* カンパニーセクション */
 .company-section {
@@ -855,6 +860,7 @@ footer {
     font-size: 1.4rem;
     padding: 0 10px;
   }
+
 
 
 
